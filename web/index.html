@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home Banking</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="css/stylesnew.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" crossorigin="anonymous">
+    </head>
+    <body>
+        <header class="header">
+            <img class="header__logo" src="img/Banklogo.png" alt="Logo del banco"/>
+
+
+
+
+        </header>
+        <main class="main">
+            <div id="cuentaPnl" class="cuenta">                
+                <nav class="cuenta__menu">
+                    <img src="img/banco2.jpg"/>
+                    <div class="cuenta__nombre">Bienvenido/a <span id="nombreUser"></span> </div>
+                    <h1 class="cuenta__titulo">Tu cuenta</h1>
+                    <ul class="cuenta_opciones">
+                        <li class="cuenta__item" id="consultarOpt"> <i class="fa fa-money" aria-hidden="true"></i> Consultar saldo</li>
+                        <li class="cuenta__item" id="extraerOpt"> <i class="fa fa-arrow-left" aria-hidden="true"></i> Extraer dinero</li>
+                        <li class="cuenta__item" id="depositarOpt"> <i class="fa fa-arrow-right" aria-hidden="true"></i> Depositar dinero</li>                   
+                        <li class="cuenta__item" id="limiteOpt"> <i class="fa fa-ban" aria-hidden="true"></i> Límite de extracción</li>
+                        <li class="cuenta__item" id="movimientosOpt"> <i class="fa fa-list" aria-hidden="true"></i> Movimientos</li>
+                        <li class="cuenta__item" id="logoutBtn"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</li>
+                    </ul>
+                </nav>
+                <section class="maestroPnl" id="masterTpl">
+                    <!-- Aca se despliega cada una de las opciones -->
+
+                </section>
+
+            </div>
+            <div id="loginPnl" class="login">
+
+                <input type="text" id="user" class="login__input" placeholder="USUARIO" value="lopez"/>
+
+                <input type="password" id="pass" class="login__input" placeholder="CLAVE" value="321"/>
+                <button id="loginBtnLocal" class="login__btn">Login local</button>
+                <button id="loginBtnServer" class="login__btn">Login server</button>
+                <div id="mensajePnl" class="login__mensaje"></div>
+            </div>
+        </main>
+
+        <!-- ZONA DE TEMPLATES -->
+        <article id="extraerTpl" class="maestroPnl--ocultar maestroPnl__item">
+            <h2>Extraer dinero</h2>
+            <input type="number" id="extraerInput" min="1"/>
+            <button id="extraerBtn">Aceptar</button>
+            <div id="pnlMensajeExtraer"></div>
+        </article>
+
+
+        <article id="consultarTpl" class="maestroPnl--ocultar">
+            <p>Saldo en tu cuenta</p>
+            <h3 id="saldo-cuenta" class="maestroPnl__saldo">$</h3>
+            <p id="limite-extraccion" class="maestroPnl__limite">Tu límite de extracción es: <span id="limiteMonto"></span></p>
+        </article>
+
+
+        <article id="depositarTpl" class="maestroPnl--ocultar">
+            <h2>Depositar dinero</h2>
+            <input type="number" id="depositarInput" min="1"/>
+            <button id="depositarBtn">Aceptar</button>
+            <div id="pnlMensajeDepositar"></div>
+        </article>
+
+        <article id="limiteTpl" class="maestroPnl--ocultar">
+            <h2>Cambiar límite de extracción</h2>
+            <input type="number" id="limiteInput" min="1"/>
+            <button id="limiteBtn">Aceptar</button>
+            <div id="pnlMensajeLimite"></div>
+        </article>
+
+        <article id="movimientosTpl" class="maestroPnl--ocultar">
+            <h2>Movimientos en tu cuenta</h2>
+
+            <div id="movimientosPnl">
+
+            </div>
+        </article>
+
+        <footer class="footer">
+            Banco Gales
+            <div>
+                <img class="footer__secure" src="img/secure.png" alt="Logo de seguridad"/>
+            </div>
+        </footer>
+        <script src="js/Screen.js" defer=""></script>
+        <script src="js/Http.js" defer=""></script>
+        <script src="js/Login.js" defer=""></script>
+        <script src="js/Cuenta.js" defer=""></script>
+        <script src="js/Movimiento.js" defer=""></script>
+        <script src="js/BaseDeDatos.js" defer=""></script>
+        <script src="js/main.js" defer=""></script>
+
+    </body>
+</html>

@@ -1,0 +1,193 @@
+/**
+ * General
+ */
+
+body { 
+    background-color: #2a333d;
+}
+
+
+
+/**
+ * Header
+ */
+
+.header {
+    /*    display: grid;
+        grid-template-columns: repeat(2, 1fr);*/
+    width: 120px;
+    margin: 0 auto;
+}
+
+.header__title {
+
+
+}
+
+.header--small {
+    width: 50px;
+}
+
+.header__logo {
+    width: 120px;
+
+}
+
+/**
+ * Login
+ */
+
+.login {
+    width: 200px;
+    height: 270px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 60px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+.login__btnIn {
+    margin-top: 15px;
+}
+
+
+.login__btn {
+    background: #4CAF50;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    width: 100%;
+    text-transform: uppercase;
+    border: 0;
+    margin-bottom: 7px;
+}
+
+.login__input {
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    height: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login__mensaje {
+    color: red;
+}
+
+/**
+ * Cuenta
+ */
+
+
+.cuenta {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    justify-items: center;
+    background-color: white;
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+.maestroPnl {
+    background-color: #0b674d;
+    border-radius: 10px;
+    width: 70%;
+    color: white;
+    padding: 5%;
+}
+
+.maestroPnl__item {
+    margin: 0 auto;
+}
+
+
+.cuenta_opciones {
+    list-style-type: none;
+    padding-left: 3px;
+}
+
+.cuenta__item {
+    color: #666666;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14pt;
+}
+
+.cuenta__item:hover
+{
+    color: #050707;
+}
+
+#cssmenu {
+    width: 220px;
+    font-family: Raleway, sans-serif;
+    color: #666666;
+}
+
+
+#cssmenu, #cssmenu ul, #cssmenu ul li, #cssmenu ul li a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    line-height: 1;
+    display: block;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.fa {
+    margin-right: 13px;
+    
+}
+
+/**
+ * Templates
+ */
+
+.maestroPnl--ocultar {
+    display: none;
+}
+
+
+
+/**
+ * Footer
+ */
+
+
+.footer {
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+}
+
+.footer__secure {
+    margin-top: 50px;
+    width: 30px;
+}
+
+
+/* 
+Mobile Version
+*/
+
+@media only screen and (max-width: 600px) {
+    /* For mobile phones: */
+    .cuenta {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    
+
+    
+}
