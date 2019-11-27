@@ -4,11 +4,15 @@ public class Productos {
 
     private String nombre;
     private String color;
-    private String tamano;
+    private int tamano;
     private int edad;
     private String marca;
     private String categoria;
     private int precio;
+
+    public Productos(String bicicleta, String negro, String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
     public int getPrecio() {
         return precio;
@@ -42,11 +46,11 @@ public class Productos {
         this.color = color;
     }
 
-    public String getTamano() {
+    public int getTamano() {
         return tamano;
     }
 
-    public void setTamano(String tamano) {
+    public void setTamano(int tamano) {
         this.tamano = tamano;
     }
 
@@ -66,14 +70,18 @@ public class Productos {
         this.marca = marca;
     }
 
-    public Productos(String nombre, String color, String tamano, int edad, String marca, int precio) {
+    public Productos(String nombre, String color, int tamano, int edad, String marca, String categoria, int precio) {
         this.nombre = nombre;
         this.color = color;
         this.tamano = tamano;
         this.edad = edad;
         this.marca = marca;
+        this.categoria = categoria;
         this.precio = precio;
     }
+
+  
+    
 
     @Override
     public String toString() {
